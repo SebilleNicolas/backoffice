@@ -1,0 +1,83 @@
+﻿/************************** CSS du Texte **************************/
+
+/************ Titres ************/
+
+/****** Titre 1 ******/
+h1{
+/* Decalage de la premiere ligne du texte */
+	text-indent: 								2em;
+/* Police */
+	font-family: 								Calibri;
+/* Ombre de la police (Horrizontale,Verticale,adoucissement du degradé,couleur de l'ombre) */
+	text-shadow: 								0.25em -0.25em 0.2em grey;
+	/* Alignement du texte au centre */
+	text-align: 								center;
+	margin-top: 2em;
+}
+
+/****** Titre 3 ******/
+h3{
+	border-bottom: 								0.1em solid black;
+}
+
+/****** Bienvenu page index ******/
+#bienvenu{
+/* Decalage */
+	text-indent: 								0em;
+/* Alignement du texte au centre */
+	text-align: 								center;
+}
+
+/************ Paragraphes ************/
+
+p{
+/* Police */
+	font-family: 								Comic Sans MS;
+	font-size: 15px;
+	-webkit-margin-before:1em	;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+p.red{
+	color: 										red;
+}
+
+/************ Liens ************/
+
+/****** Accueil Normal ******/
+#Accueil{
+/* Pas de decoration de texte*/
+	text-decoration: 							none;
+/* Couleur noir */
+	color: 										black;
+}
+
+/****** Accueil Visité ******/
+#Accueil.visited{
+/* Pas de deciration */
+	text-decoration: 							none;
+/* Couleur noir */
+	color: 										black;
+}
+
+/****** Icones Normal ******/
+a.icone{
+/* Alignement du texte au centre */
+	text-align:									center;
+/* Pas de decoration */
+	text-decoration: 							none;
+/* Couleur de la police noir */
+	color: 										black;
+}
+
+/****** Icones Visité ******/
+a.icone.visited{
+/* Alignement du texte au centre */
+	text-align:									center;
+/* Pas de decoration */
+	text-decoration: 							none;
+/* Couleur de la police noir */
+	color: 										black;
+}
