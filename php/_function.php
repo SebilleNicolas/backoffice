@@ -29,7 +29,7 @@ function connexion()
 			error_log($messageErreur,0);
 			
 		}
-	
+	// var_dump($pdo);exit;
 	return $pdo ;
 
 	
@@ -53,7 +53,7 @@ function verification($id, $mdp)
 		$prep -> bindParam(':user', $id, PDO::PARAM_STR);
 		
 		$prep -> bindParam(':mdp', $mdp, PDO::PARAM_STR);
-		var_dump($sql); 
+		// var_dump($sql); 
 		$prep -> execute();
 		
 		$resultat = $prep -> fetch();
@@ -261,13 +261,13 @@ function listeFicheVisiteur()
 
 
 /************** Fonction de création d'une fiche **************/
-function creePizza($NomPizza, $Ingredient, $Prix )
+function creePizza($NomPizza, $Ingredient, $Prix , $Image)
 {
 
 	$reussi = false;
 		
 	$pdo = connexion();
-	var_dump($pdo);
+	// var_dump($pdo);
 	if($pdo != false)
 	{
 		// var_dump($NomPizza);
@@ -275,15 +275,18 @@ function creePizza($NomPizza, $Ingredient, $Prix )
 // var_dump($Prix);		exit;
 		// $id = $pdo -> quote($id);
 		
-	
+	// echo 'anus'; exit();
+		$Image = $pdo -> quote($Image);
+		$NomPizza = $pdo -> quote($NomPizza);
+		
 		
 		$insert = "
 					INSERT INTO Pizza
-					VALUES ( null, '".$NomPizza."',$Prix,'')
+					VALUES ( null, $NomPizza,$Prix,$Image)
 					";
 					
 					
-		// var_dump($insert); exit();
+		// var_dump($insert); exit;
 		$res = $pdo -> exec($insert);
 
 		
