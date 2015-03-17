@@ -41,7 +41,7 @@
 	/*Vérification de l'existence des variables user et mdp*/
 	if(isset($_REQUEST["user"]) && isset($_REQUEST["mdp"]))
 	{
-		
+		// var_dump($_REQUEST);
 		/*Vérification si le login et le mot de passe sont présent dans la base de données*/
 		if(verification($_REQUEST["user"],$_REQUEST["mdp"]))
 		{

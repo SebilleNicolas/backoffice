@@ -24,7 +24,7 @@ header('Content-Type: text/html; charset=UTF-8');
 		
 	if(isset($_POST['dd']))
 	{
-	// var_dump($_REQUEST['NouvellePizza']);
+	var_dump($_REQUEST);exit;
 	if($_REQUEST['NouvellePizza'] == ""){
 	$message='Erreur: Vous devez ajouter un Nom a la nouvelle pizza.';
 	echo '<script type="text/javascript">window.alert("'.$message.'");</script>';
