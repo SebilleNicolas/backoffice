@@ -6,6 +6,10 @@
 
 /******************************************** FONCTIONS ********************************************/
 
+
+function anus()
+{
+}
 /************** Fonction de connexion à la base de données **************/
 function connexion()
 {
