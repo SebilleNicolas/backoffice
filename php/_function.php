@@ -16,7 +16,7 @@ function connexion()
 	try {
 
 			$pdo = new PDO( 
-			'mysql:host=127.0.0.1;dbname=spizza', 
+			'mysql:host=localhost;dbname=spizza', 
 			'root',
 			'root'
 			); 
@@ -54,7 +54,7 @@ function verification($id, $mdp)
 		$prep -> bindParam(':user', $id, PDO::PARAM_STR);
 		
 		$prep -> bindParam(':mdp', $mdp, PDO::PARAM_STR);
-		var_dump($sql); 
+		// var_dump($sql); 
 		$prep -> execute();
 		
 		$resultat = $prep -> fetch();
@@ -268,7 +268,7 @@ function creePizza($NomPizza, $Ingredient, $Prix )
 	$reussi = false;
 		
 	$pdo = connexion();
-	var_dump($pdo);
+	// var_dump($pdo);
 	if($pdo != false)
 	{
 		// var_dump($NomPizza);
@@ -285,6 +285,37 @@ function creePizza($NomPizza, $Ingredient, $Prix )
 					
 					
 		// var_dump($insert); exit();
+		$res = $pdo -> exec($insert);
+
+		
+		if($res == 1)
+		{
+		
+			$reussi = true;
+		
+		}
+	}
+	
+	return $reussi;
+	
+}
+function creeIngredient($NomIngredient)
+{
+
+	$reussi = false;
+		
+	$pdo = connexion();
+
+	if($pdo != false)
+	{
+		
+		
+		$insert = "
+					INSERT INTO ingredient
+					VALUES ( null, '".$NomIngredient."')
+					";
+					
+					
 		$res = $pdo -> exec($insert);
 
 		

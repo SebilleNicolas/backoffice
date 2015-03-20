@@ -34,24 +34,24 @@ header('Content-Type: text/html; charset=UTF-8');
 	
 		$NomPizza = $_REQUEST['NouvellePizza'];
 		// Mettre le name dans le input type file *****************************************************************************
-<<<<<<< HEAD
+
 		$Image = $_REQUEST['NouvelleImage'];
 		// var_dump($Image);exit;
 		
-=======
+
 		// $Image = $_REQUEST['NouvelleImage'];
->>>>>>> 0c406450257790bd7f2598ad62d9bd255eeac9e3
+
 		$Ingredient = $_REQUEST['NouveauIngredient'];
 		$Prix = $_REQUEST['NouveauPrix'];
 		
 		
 		
 		//création de la pizza 
-<<<<<<< HEAD
+
 		$reussi = creePizza($NomPizza, $Ingredient, $Prix,$Image);
-=======
+
 		$reussi = creePizza($NomPizza, $Ingredient, $Prix);
->>>>>>> 0c406450257790bd7f2598ad62d9bd255eeac9e3
+
 
 		if($reussi = false){$message='Erreur fiche non ajouter';}
 		
@@ -125,11 +125,11 @@ header('Content-Type: text/html; charset=UTF-8');
 				<input type="text"  style="width: 220px;" name="NouvellePizza" class="modification" />
 				</td>
 				<td>
-<<<<<<< HEAD
+
 				<input type="file" name="NouvelleImage" />
-=======
+
 				<input type="file" name="nom" />
->>>>>>> 0c406450257790bd7f2598ad62d9bd255eeac9e3
+
 				
 				</td>
 				<td>
