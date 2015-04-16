@@ -330,6 +330,37 @@ function creeIngredient($NomIngredient)
 	return $reussi;
 	
 }
+function suprIngredient($NomIngredient)
+{
+
+	$reussi = false;
+		
+	$pdo = connexion();
+
+	if($pdo != false)
+	{
+		
+		
+		$delete = "
+					DELETE FROM ingredient
+					WHERE id = '".$NomIngredient."'
+					";
+					
+					
+		$res = $pdo -> exec($delete);
+
+		
+		if($res == 1)
+		{
+		
+			$reussi = true;
+		
+		}
+	}
+	
+	return $reussi;
+	
+}
 /************** Fonction de suppression d'une fiche **************/
 function supprimerFiche($id)
 {
